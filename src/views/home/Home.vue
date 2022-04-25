@@ -44,14 +44,23 @@
 					<van-col span="6">
 						<div class="dashboard-menu-item">
 							<van-image width="38px" height="38px" :src="item.src"></van-image>
-							<div class="dz-font-size-12">{{ item.title }}</div>
+							<div class="vudz-font-size-13">{{ item.title }}</div>
 						</div>
 					</van-col>
 				</template>
 			</van-row>
-			<!-- <van-list finished-text="没有更多了">
-				<van-cell v-for="(item, index) in list" :key="index" :title="item.title" icon="success" />
-			</van-list> -->
+		</div>
+		<div class="dashboard-key-container">
+			<div class="flex-between dashboard-key-header">
+				<div class="dz-font-size-15 dz-font-bold">
+					关键指标<span class="dz_text">(2022年的本年累计数据)</span>
+				</div>
+				<div class="flex-between">
+					<div class="dz-font-size-12" style="color: rgb(178, 179, 193);">更多</div>
+					<van-image width="6px" height="6px" src="/src/assets/home/more.png"></van-image>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </template>
@@ -78,10 +87,26 @@
 	  .dashboard-menu-item {
 		  line-height: 14px;
 		  margin-bottom: 18px;
-		//   padding: 0.4375rem 0;
 		  text-align: center;
-		  .dz-font-size-12 {
+		  .vudz-font-size-13 {
 			  font-size: 13px!important
+		  }
+	  }
+  }
+  .dashboard-key-container {
+	  flex-wrap: wrap;
+	  border-radius: 10px;
+	  box-shadow: 0 1px 10px -2px rgb(0 0 0 / 15%);
+	  margin: 14px;
+	  padding: 13px;
+	  .dashboard-key-header {
+		  width: 100%;
+		  margin-bottom: 12px;
+		  .dz_text {
+			  color: rgb(157, 158, 174);
+			  font-weight: normal;
+			  margin-left: 5px;
+			  font-size: 10px;
 		  }
 	  }
   }

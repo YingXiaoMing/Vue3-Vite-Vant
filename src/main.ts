@@ -9,6 +9,9 @@ import 'lib-flexible/flexible.js';
 // 引入全局样式
 import '@/assets/scss/index.scss';
 
+
+import '@/assets/scss/app.scss';
+
 // 全局引入按需引入UI库 vant
 import { vantPlugins } from './plugins/vant.js'
 
