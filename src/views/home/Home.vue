@@ -10,6 +10,7 @@
 	import d6 from '@/assets/home/d6.png'
 	import d7 from '@/assets/home/d7.png'
 	import d8 from '@/assets/home/d8.png'
+import HomeHeader from './HomeHeader.vue'
 
 	const useShowList = () => {
 		const state = reactive({
@@ -32,7 +33,8 @@
 
 <template>
 	<div>
-		<CustomHeader title="XX超市" />
+		<HomeHeader></HomeHeader>
+		<!-- <CustomHeader title="XX超市" /> -->
 		<div class="py-3 px-3">
 			<div class="title py-2 flex-start align-items-center">
 				<van-image width="100rem" :src="logo" />
