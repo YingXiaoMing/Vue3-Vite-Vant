@@ -60,6 +60,24 @@
 					<van-image width="6px" height="6px" src="/src/assets/home/more.png"></van-image>
 				</div>
 			</div>
+			<div class="flex-between dashboard-key">
+				<div class="dashboard-key-item bg1">
+					<p>营业收入(元)</p>
+					<div class="dashboard-key-item-title">306,797.50</div>
+				</div>
+				<div class="dashboard-key-item bg2">
+					<p>销售费用(元)</p>
+					<div class="dashboard-key-item-title">0.00</div>
+				</div>
+				<div class="dashboard-key-item bg3">
+					<p>管理费用(元)</p>
+					<div class="dashboard-key-item-title">97,591.00</div>
+				</div>
+				<div class="dashboard-key-item bg4">
+					<p>财务费用(元)</p>
+					<div class="dashboard-key-item-title">0.00</div>
+				</div>
+			</div>
 			
 		</div>
 	</div>
@@ -93,6 +111,43 @@
 		  }
 	  }
   }
+  .dashboard-key {
+	  flex-wrap: wrap;
+	  margin-top: 2px;
+	  .dashboard-key-item {
+		  width: calc(50% - 12px);
+		  height: 58px;
+		  padding: 15px 0 0 10px;
+		  line-height: 22px;
+		  margin-bottom: 4px;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  p {
+			  font-size: 13px;
+			  color: grey;
+		  }
+		  .dashboard-key-item-title {
+			  color: rgb(26, 40, 60);
+			  font-size: 18px;
+			  font-weight: 600;
+		  }
+		  &.bg1 {
+			  background-image: url('/src/assets/home/bg1.png');
+		  }
+		  &.bg2 {
+			  background-image: url('/src/assets/home/bg2.png');
+		  }
+		  &.bg3 {
+			  background-image: url('/src/assets/home/bg3.png');
+		  }
+		  &.bg4 {
+			  background-image: url('/src/assets/home/bg4.png');
+		  }
+
+	  }
+  }
+
+  
   .dashboard-key-container {
 	  flex-wrap: wrap;
 	  border-radius: 10px;

@@ -32,23 +32,30 @@
 
 <template>
 	<div class="about">
-		<CustomHeader title="我的" />
-		<div class="wrapper">
-			<div class="list flex-center py-8 flex-column">
-				<span class="logo">
-					<van-image width="150" :src="logo" />
-				</span>
-				<span class="logo fs-1 py-3 opacity-75">VUE3 H5开发模板</span>
-				<span class="fs-6 py-3 opacity-75">
-					项目地址：
-					<a href="https://github.com/talktao/Vue3-Vite-Vant-TS-H5">https://github.com/talktao/Vue3-Vite-Vant-TS-H5</a>
-				</span>
-				<span class="fs-3 py-3 opacity-75">项目作者：talktao</span>
-				<span class="fs-3 py-3 opacity-75">
-					{{ userName }}
-					<van-button v-if="userName == ''" color="#f50" size="small" @click="handleBtn">点我有魔法~</van-button>
-				</span>
+		<div class="user-row flex-start">
+			<img src="/src/assets/me/HeadPortrait.png" />
+			<div style="margin-left: 12px">
+				<div class="user_name">131****8652</div>
+				<div class="user_phone">131****8652</div>
 			</div>
+		</div>
+		<div class="width-100"></div>
+		<div class="module-content">
+			<div class="flex-between">
+				<img class="module-icon" src="/src/assets/me/account.png"/>
+				<div class="flex-between module-item">
+					<span>账套信息</span>
+					<img style="width: 8px" src="/src/assets/me/arrow.png" />
+				</div>
+			</div>
+			<div class="flex-between">
+				<img class="module-icon" src="/src/assets/me/set.png"/>
+				<div class="flex-between module-item">
+					<span>账号设置</span>
+					<img style="width: 8px" src="/src/assets/me/arrow.png" />
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </template>
@@ -56,5 +63,52 @@
 
 
 <style lang="scss" scoped>
+.width-100 {
+	height: 6px;
+	background-color: rgb(245, 245, 250);
+	width: 100%;
+}
+.module-content {
+	padding: 0px 16px;
+	.module-icon {
+		width: 24px;
+		margin-right: 6px;
+		height: 24px;
+	}
+	.module-item {
+		width: 100%;
+		padding: 13px 0;
+		font-size: 13px;
+		font-weight: 500;
+		color: #333;
+		line-height: 24px;
+		border-bottom: 2px solid #ececec;
+		span {
+			margin-top: 5px;
+		}
+	}
+}
+.user-row {
+	padding: 20px 14px 20px;
+	border-bottom: 7px solid rgba(76,217,100,.04);
+	img {
+		width: 55px;
+		height: 55px;
+		border-radius: 50%;
+		margin-bottom: 14px;
+		border: none;
+	}
+	.user_name {
+		font-size: 22px;
+		font-weight: 500;
+	}
+	.user_phone {
+		font-size: 12px;
+		margin-top: 6px;
+		color: rgb(153, 153, 153);
+		margin-left: 4px;
+	}
+	
 
+}
 </style>
