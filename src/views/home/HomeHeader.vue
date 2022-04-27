@@ -1,6 +1,6 @@
 
 <script lang="ts">
-
+import { ref } from 'vue'
 export default {
     name: 'HomeHeader'
 }
@@ -9,7 +9,7 @@ export default {
 <script setup lang="ts">
 
 
-
+    const visible = ref(false);
 
 
 
@@ -28,6 +28,11 @@ export default {
             </template>
         </van-nav-bar>
     </van-sticky>
+    <van-action-sheet v-model:show="visible">
+        <div class="content">是我爱得太过天真</div>
+    </van-action-sheet>
+
+
 </template>
 <style lang="scss" scoped>
 
